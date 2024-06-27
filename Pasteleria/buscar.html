@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script>
+        function limpiarCampos() {
+            // Seleccionar todos los elementos de entrada y de texto en el formulario
+            var campos = document.querySelectorAll('input[type=text], textarea');
+            
+            // Iterar sobre cada elemento y establecer su valor como cadena vacía
+            campos.forEach(function(elemento) {
+                elemento.value = '';
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="titulo">
+        <h2>Buscar pastel</h2>
+    </div>
+
+    <div class="cuadro">
+    <form action="buscar.php" method="POST">
+        <label for="codigo">Codigo del articulo (identificador):</label>
+        <input type="text" id="codigo" name="codigo" required><br><br>
+        
+        <input type="submit" value="buscar">
+        <input type="button" value="Limpiar" onclick="limpiarCampos()" style="margin-top: 20px;">
+    </form>
+    </div>
+
+</body>
+</html>

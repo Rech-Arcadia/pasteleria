@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Pastel - Sweet Bakery</title>
+    <script>
+        function limpiarCampos() {
+            var campos = document.querySelectorAll('input[type=text], textarea, input[type=number]');
+            campos.forEach(function(elemento) {
+                elemento.value = '';
+            });
+        }
+
+        function validarLongitud(input) {
+            if (input.value.length > 8) {
+                input.value = input.value.slice(0, 8);
+            }
+        }
+
+        function soloNumeros(event) {
+            var char = String.fromCharCode(event.which);
+            if (!(/[0-9]/.test(char))) {
+                event.preventDefault();
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="agregar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 style="color: black;" class="banner">Agregar Nuevo Pastel</h1>
+
+    <section class="form-section">
+        <form action="agregar.php" method="post">
+            <div class="form-group">
+                <label for="pastel">Nombre del Pastel:</label>
+                <input type="text" id="pastel" name="pastel" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo">Codigo del Pastel:</label>
+                <input type="text" id="codigo" name="codigo" required oninput="validarLongitud(this)" maxlength="8" onkeypress="soloNumeros(event)">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="existencias">Existencias:</label>
+                <input type="number" id="existencias" name="existencias" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="caseros">Pasteles caseros</option>
+                    <option value="temporada">Pasteles de temporada</option>
+                    <option value="clasicos">Clasicos</option>
+                    <option value="nuevos">Nuevos Productos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Agregar</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn" onclick="limpiarCampos()">Limpiar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

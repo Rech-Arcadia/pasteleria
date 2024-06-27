@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Pastel - Sweet Bakery</title>
+    <link rel="stylesheet" href="agregar.css">
+    <link rel="stylesheet" type="text/css" href="phtyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner de pastelería">
+        <div class="banner-text">
+            <h1>Agregar Nuevo Pastel</h1>
+        </div>
+    </section>
+    -->
+
+    <h1 style="color: black;" class="banner">Actualizar Pastel</h1>
+
+    <section class="form-section">
+        <form action="actualizar.php" method="post">
+            <div class="form-group">
+                <label for="codigo">Codigo del Pastel a editar:</label>
+                <input type="text" id="codigo" name="codigo" required>
+            </div>
+            <div class="form-group">
+                <label for="pastel">Nuevo Nombre del Pastel:</label>
+                <input type="text" id="pastel" name="pastel" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Nueva Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precio">Nuevo Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="existencias">Nueva Existencias:</label>
+                <input type="number" id="existencias" name="existencias" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Nueva Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="chocolate">Pasteles de Chocolate</option>
+                    <option value="boda">Pasteles de Boda</option>
+                    <option value="nuevos">Nuevos Productos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Actualizar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

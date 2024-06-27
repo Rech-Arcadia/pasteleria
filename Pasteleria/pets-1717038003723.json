@@ -1,0 +1,14 @@
+[
+  {
+    "color": "gray",
+    "type": "cat",
+    "size": "medium",
+    "name": "Orejitas"
+  },
+  {
+    "color": "gray",
+    "type": "cockatiel",
+    "size": "medium",
+    "name": "Bella"
+  }
+]

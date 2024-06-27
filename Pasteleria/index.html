@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosy's Cake</title>
+    <!--Importo mi CSS para el diseño de mi pgina web (programa)-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Menú en la parte superior de la aguna web-->
+    <header>
+        <nav>
+            <ul>
+                <!-- Enlaces de navegación -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <!--<li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección de banner principal (Imagen) -->
+    <section class="banner">
+        <!-- Imagen del banner -->
+        <img src="banner.jpg" alt="Banner de pastelería">
+        <!-- Texto sobre banner -->
+        <div class="banner-text">
+            <h1>Bienvenidos a Rosy's Cake</h1>
+            <p>El delicioso sabor que tu paladar anhela</p>
+        </div>
+    </section>
+
+    <!-- Sección de botones con imágenes -->
+    <section class="buttons">
+        <!-- Primer botón (agregar) con imagen, al darle clic te mandara a el apartado de agregar.php-->
+        <div class="button-with-image">
+            <button class="btn" onclick="window.location.href='agregar.php'">Agregar</button>
+            <img src="agregar.png" alt="Cupcakes">
+        </div>
+        <!-- Segundo botón (eliminar) con imagen, al darle clic te mandara a el apartado de eliminar.php-->
+        <div class="button-with-image">
+            <button class="btn" onclick="window.location.href='eliminar.php'">Eliminar</button>
+            <img src="eliminar.png" alt="Pasteles de Boda">
+        </div>
+        <div class="button-with-image">
+        <!-- Tercer botón (buscar) con imagen, al darle clic te mandara a el apartado de buscar.php-->
+            <button class="btn" onclick="window.location.href='buscar.php'">Buscar</button>
+            <img src="buscar.png" alt="Nuevos Productos">
+        </div>
+    </section>
+</body>
+</html>
